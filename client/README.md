@@ -32,41 +32,38 @@ en angular.json reemplazar por:
 
 ### crear componente Tarjeta
 ``` 
-ng g c components/crear-tarjeta
-ng g c components/listar-tarjeta
+ng g c components/crear-producto
+ng g c components/listar-producto
 
 ```
-### crear Servicio Tarjeta
-Utilizamos para peticiones a firebase y pasar datos
+### crear Servicio Producto
+Utilizamos para peticiones al service y pasar datos
 ``` 
-ng g s services/tarjeta
+ng g s services/producto
 
 ```
 
-### crear Clase Tarjeta
+### crear Clase Producto
 ``` 
-ng g cl models/TarjetaCredito 
+ng g cl models/Producto 
 
 ```
-Escribir en la clase Tarjeta:
+Escribir en la clase Producto:
 
 ``` 
-export class TarjetaCredito {
-    id?: string;
-    titular: string;
-    numeroTarjeta: string;
-    fechaExpiracion: string;
-    cvv: number;
-    fechaCreacion: Date;
-    fechaActualizacion: Date;
+export class Producto {
+    _id?: number;
+    nombre: string;
+    categoria: string;
+    ubicacion: string;
+    precio: number;
 
-    constructor(titular: string, numeroTarjeta: string, fechaExpiracion: string , cvv: number){
-        this.titular = titular;
-        this.numeroTarjeta = numeroTarjeta;
-        this.fechaExpiracion = fechaExpiracion;
-        this.cvv = cvv;
-        this.fechaCreacion = new Date();
-        this.fechaActualizacion = new Date();
+    constructor(nombre: string, categoria: string, ubicacion: string, precio: number){
+        this.nombre = nombre;
+        this.categoria = categoria;
+        this.ubicacion = ubicacion;
+        this.precio = precio;
+
     }
 
 }

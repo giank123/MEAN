@@ -26,7 +26,7 @@ npm install -D nodemon
 npm install express mongoose dotenv
 ```
 
-3. Correr aplicacion 
+3. Correr aplicacion  Navigate to `http://localhost:4000/`. The app will automatically reload if you change any of the source files.
 ```
 npm run dev
 ```
